@@ -94,7 +94,7 @@ object MethodNotations_2 extends App{
     def apply(): String = s"Hi, my name is $name"
 
 
-    def +(name: String): Person2 = new Person2(s"${this.name} ($name)", favoriteMovie)
+    def +(nickname: String): Person2 = new Person2(s"${this.name} ($nickname)", favoriteMovie)
 
 
     def unary_+ : Person2 = new Person2(name, favoriteMovie, age + 1)
@@ -103,7 +103,7 @@ object MethodNotations_2 extends App{
     def learns(subject: String): String = s"$name learns $subject"
 
 
-    def learnsScala: String = this.learns("Scala")
+    def learnsScala: String = learns("Scala")
 
     def apply(n: Int): String = s"$name watched $favoriteMovie $n times"
   }
