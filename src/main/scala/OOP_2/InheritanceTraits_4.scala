@@ -11,8 +11,10 @@ object InheritanceTraits_4 extends App{
   }
 
   class Cat extends Animal{
+    override def sleep: Unit = println("override protected")
     def some = {
       sleep
+      super.sleep
     }
   }
 
@@ -22,6 +24,7 @@ object InheritanceTraits_4 extends App{
   //no available
   //cat.sit
   cat.some
+  cat.sleep
 
 
   // constructors
